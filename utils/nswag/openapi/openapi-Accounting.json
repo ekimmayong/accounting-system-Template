@@ -6,11 +6,35 @@
   },
   "servers": [
     {
-      "url": "http://localhost:5068/api"
+      "url": "http://localhost:5068"
     }
   ],
   "paths": {
-    "/WeatherForecast": {
+    "/api/Home/getValue": {
+      "get": {
+        "tags": [
+          "Home"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Home/PostItem": {
+      "post": {
+        "tags": [
+          "Home"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/WeatherForecast": {
       "get": {
         "tags": [
           "WeatherForecast"

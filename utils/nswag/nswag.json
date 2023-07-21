@@ -63,7 +63,7 @@
         "enumNameGeneratorType": null,
         "serviceHost": null,
         "serviceSchemes": null,
-        "output": "../generatedApi/$(API_Name).ts",
+        "output": "../../components/api/$(API_Name).ts",
         "newLineBehavior": "Auto"
       }
     }

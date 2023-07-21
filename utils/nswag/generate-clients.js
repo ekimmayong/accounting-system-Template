@@ -1,8 +1,6 @@
 const fs = require('fs');
 const { execFile } = require('child_process');
 
-// import * from '../../../node_modules/.bin/nswag'
-
 const openapis = fs.readdirSync('openapi');
 
 function capitalize(string){
@@ -17,7 +15,7 @@ openapis.forEach((openapi) => {
     const apiName = `${capitalize(apiPath)}_API`;
 
     execFile(
-        `"../../../node_modules/.bin/nswag"`,
+        `"../../node_modules/.bin/nswag"`,
         ['run', `/Variables:Path=openapi/${openapi},API_Name=${apiName}`],
         {shell: true },
         (error, stdout, stderr) => {
